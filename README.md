@@ -55,3 +55,9 @@ Java 21+      # java -version
 Node.js 18+   # node -v
 PostgreSQL 14+# psql --version
 Angular CLI   # ng version
+
+🔗 Enlaces Importantes
+Recurso	URL
+Backend	http://localhost:8090
+Swagger UI	http://localhost:8090/swagger-ui.html
+Frontend	http://localhost:4200
