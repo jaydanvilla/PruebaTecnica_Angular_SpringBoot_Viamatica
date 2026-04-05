@@ -1,0 +1,78 @@
+/* Tabla */
+.table {
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.table thead th {
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  border-bottom-width: 2px;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Botones */
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Spinner */
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Tabla responsive */
+.table-responsive {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Celdas */
+.table td, .table th {
+  padding: 12px 15px;
+  vertical-align: middle;
+}
+
+/* Iconos */
+.bi {
+  font-size: 0.9rem;
+}
+
+/* Título */
+.display-5 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Mensaje sin datos */
+.btn-primary {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

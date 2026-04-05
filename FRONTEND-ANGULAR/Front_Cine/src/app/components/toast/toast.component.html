@@ -1,0 +1,18 @@
+<div *ngIf="toast" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+  <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header" [ngClass]="getHeaderClass()">
+      <i class="bi" [ngClass]="getIconClass()" style="font-size: 1.2rem;"></i>
+      <strong class="me-auto ms-2">
+        <span *ngIf="toast.type === 'success'">Éxito</span>
+        <span *ngIf="toast.type === 'error'">Error</span>
+        <span *ngIf="toast.type === 'warning'">Advertencia</span>
+        <span *ngIf="toast.type === 'info'">Información</span>
+      </strong>
+      <button type="button" class="btn-close" (click)="toast = null" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      <i class="bi" [ngClass]="getIconClass()" style="margin-right: 8px;"></i>
+      {{ toast.message }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<app-menu></app-menu>
+
+<div class="container py-4">
+  <!-- Título -->
+  <div class="text-center mb-5">
+    <h1 class="display-5 fw-bold text-dark">Dashboard</h1>
+    <p class="text-muted">Panel de control del sistema de cine</p>
+  </div>
+
+  <!-- Tarjetas de indicadores -->
+  <div class="row justify-content-center g-4 mb-5">
+    <!-- Tarjeta Total Películas -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow-sm border-0 rounded-4 text-center h-100">
+        <div class="card-body p-4">
+          <div class="rounded-circle bg-primary bg-opacity-10 d-inline-flex p-3 mb-3">
+            <i class="bi bi-film fs-4 text-primary"></i>
+          </div>
+          <h6 class="card-title text-muted mb-2">Total Películas</h6>
+          <p class="display-6 fw-bold text-primary mb-0">{{ totalPeliculas }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta Total Salas -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow-sm border-0 rounded-4 text-center h-100">
+        <div class="card-body p-4">
+          <div class="rounded-circle bg-success bg-opacity-10 d-inline-flex p-3 mb-3">
+            <i class="bi bi-building fs-4 text-success"></i>
+          </div>
+          <h6 class="card-title text-muted mb-2">Total Salas</h6>
+          <p class="display-6 fw-bold text-success mb-0">{{ totalSalas }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta Salas Disponibles -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow-sm border-0 rounded-4 text-center h-100">
+        <div class="card-body p-4">
+          <div class="rounded-circle bg-warning bg-opacity-10 d-inline-flex p-3 mb-3">
+            <i class="bi bi-check-circle fs-4 text-warning"></i>
+          </div>
+          <h6 class="card-title text-muted mb-2">Salas Disponibles</h6>
+          <p class="display-6 fw-bold text-warning mb-0">{{ salasDisponibles }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones de acción rápida -->
+  <div class="row justify-content-center g-3">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <button routerLink="/peliculas" class="btn btn-primary w-100 py-2 rounded-4 fw-semibold">
+        <i class="bi bi-film me-2"></i>
+        Películas
+      </button>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <button routerLink="/salas" class="btn btn-success w-100 py-2 rounded-4 fw-semibold">
+        <i class="bi bi-building me-2"></i>
+        Salas
+      </button>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <button routerLink="/asignaciones" class="btn btn-warning w-100 py-2 rounded-4 fw-semibold">
+        <i class="bi bi-link me-2"></i>
+        Asignaciones
+      </button>
+    </div>
+  </div>
+</div>

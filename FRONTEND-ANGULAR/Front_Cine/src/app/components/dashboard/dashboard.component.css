@@ -1,0 +1,33 @@
+/* Transiciones suaves */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Botones */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Título */
+.display-5 {
+  font-size: 2rem;
+}
+
+.display-6 {
+  font-size: 1.75rem;
+}
+
+/* Tarjetas más compactas */
+.card-body {
+  padding: 1.5rem !important;
+}

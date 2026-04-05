@@ -1,0 +1,95 @@
+/* Tarjeta del formulario */
+.card {
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Título */
+.display-5 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Labels */
+.form-label {
+  color: #1e3c72;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Inputs y selects */
+.form-select, .form-control {
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.form-select:focus, .form-control:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 0 0.2rem rgba(30, 60, 114, 0.25);
+}
+
+/* Botón primario */
+.btn-primary {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border: none;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Botón secundario */
+.btn-outline-secondary {
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+  transform: translateY(-1px);
+}
+
+/* Alertas */
+.alert {
+  border: none;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Spinner */
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Texto de ayuda */
+.form-text {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Iconos */
+.bi {
+  font-size: 0.9rem;
+}
+
+/* Espaciado */
+.container {
+  max-width: 1200px;
+}

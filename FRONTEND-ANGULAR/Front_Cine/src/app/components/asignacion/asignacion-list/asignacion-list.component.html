@@ -1,0 +1,74 @@
+<app-menu></app-menu>
+
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-xl-10 col-xxl-9">
+      <!-- Título -->
+      <div class="text-center mb-4">
+        <h1 class="display-6 fw-bold text-dark">Asignaciones</h1>
+        <p class="text-muted">Gestión de películas asignadas a salas</p>
+      </div>
+
+      <!-- Botón nueva asignación -->
+      <div class="text-end mb-4">
+        <button routerLink="/asignaciones/nueva" class="btn btn-primary rounded-4 px-4 py-2">
+          <i class="bi bi-plus-circle me-2"></i>
+          Nueva Asignación
+        </button>
+      </div>
+
+      <!-- Mensaje de error -->
+      <div *ngIf="errorMessage" class="alert alert-danger rounded-4" role="alert">
+        <i class="bi bi-exclamation-triangle me-2"></i>
+        {{ errorMessage }}
+      </div>
+
+      <!-- Cargando -->
+      <div *ngIf="loading" class="text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-2 text-muted">Cargando asignaciones...</p>
+      </div>
+
+      <!-- Tabla de asignaciones -->
+      <div *ngIf="!loading && asignaciones.length > 0" class="table-responsive">
+        <table class="table table-hover table-bordered rounded-4 overflow-hidden shadow-sm">
+          <thead class="table-dark">
+            <tr class="text-center">
+              <th style="width: 8%">ID</th>
+              <th style="width: 27%">Película</th>
+              <th style="width: 27%">Sala</th>
+              <th style="width: 18%">Fecha Pub.</th>
+              <th style="width: 12%">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let a of asignaciones" class="align-middle">
+              <td class="text-center fw-bold">{{ a.idPeliculaSala }}</td>
+              <td>{{ a.pelicula.nombre || 'N/A' }}</td>
+              <td>{{ a.salaCine.nombre || 'N/A' }}</td>
+              <td class="text-center">{{ a.fechaPublicacion }}</td>
+              <td class="text-center">
+                <button (click)="eliminarAsignacion(a.idPeliculaSala)" class="btn btn-danger btn-sm rounded-3 px-3">
+                  <i class="bi bi-trash3 me-1"></i>
+                  Eliminar
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sin datos -->
+      <div *ngIf="!loading && asignaciones.length === 0" class="text-center py-5">
+        <i class="bi bi-inbox fs-1 text-muted"></i>
+        <p class="text-muted mt-2">No hay asignaciones registradas</p>
+        <button routerLink="/asignaciones/nueva" class="btn btn-primary rounded-4 mt-2">
+          <i class="bi bi-plus-circle me-2"></i>
+          Crear primera asignación
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

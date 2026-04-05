@@ -1,0 +1,78 @@
+/* Estilo del navbar */
+.navbar {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+}
+
+/* Estilo de los enlaces */
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Enlace activo */
+.nav-link.active {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Marca / Logo */
+.navbar-brand {
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover {
+  opacity: 0.9;
+}
+
+/* Botón de cerrar sesión */
+.btn-outline-light {
+  border-width: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Texto de bienvenida */
+.text-light {
+  font-size: 0.9rem;
+}
+
+/* Iconos */
+.bi {
+  font-size: 1rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin: 1rem 0;
+  }
+  
+  .nav-link {
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+  
+  .d-flex {
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
