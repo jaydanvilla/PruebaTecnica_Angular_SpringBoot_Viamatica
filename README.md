@@ -61,3 +61,25 @@ Recurso	URL
 Backend	http://localhost:8090
 Swagger UI	http://localhost:8090/swagger-ui.html
 Frontend	http://localhost:4200
+
+---
+
+## 📦 Dependencias Excluidas del Repositorio (para reducir peso)
+
+Las siguientes carpetas NO están incluidas en el repositorio, pero se regeneran automáticamente:
+
+| Carpeta excluida | Tecnología | Comando para regenerar |
+|------------------|------------|------------------------|
+| `node_modules/` | Angular / Node.js | `npm install` |
+| `target/` | Spring Boot / Maven | `mvn clean install` |
+| `.mvn/` | Maven Wrapper | `mvn clean install` (opcional) |
+
+---
+
+## 🔧 Instalación después de clonar el repositorio
+
+### 1. Backend (Spring Boot)
+```bash
+cd Back_Cine
+mvn clean install      # Descarga dependencias y genera la carpeta target/
+mvn spring-boot:run    # Ejecuta el servidor en http://localhost:8090
